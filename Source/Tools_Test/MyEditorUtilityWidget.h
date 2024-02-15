@@ -13,5 +13,8 @@ UCLASS()
 class TOOLS_TEST_API UMyEditorUtilityWidget : public UEditorUtilityWidget
 {
 	GENERATED_BODY()
-	
+
+public:
+	UFUNCTION(BlueprintCallable, Category = "Utilities")
+	void RenameSelectedAssets(const FString& Prefix, const FString& Suffix);
 };
