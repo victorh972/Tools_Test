@@ -36,7 +36,8 @@ void UMyEditorUtilityWidget::RenameSelectedAssets(const FString& Prefix, const F
 
         // Rename the asset
         TArray<FAssetRenameData> AssetsToRename;
-        AssetsToRename.Add(FAssetRenameData(Asset.GetAsset(), Asset.PackagePath, NewName));
+        
+        AssetsToRename.Add(FAssetRenameData(Asset.GetAsset(), Asset.PackagePath.ToString(), NewName));
         AssetTools.RenameAssets(AssetsToRename);
     }
 }
